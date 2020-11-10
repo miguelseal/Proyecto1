@@ -1,0 +1,81 @@
+@font-face {
+  font-family: Blueberry;
+  src: url("./font-blueberry .ttf");
+}
+
+html, body {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: lightgray url("../images/brick-wall.jpg") repeat top left;
+}
+
+h1 {
+  font-family: Blueberry, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3rem;
+  letter-spacing: .7rem;
+  color: rgb(60, 80, 100); 
+  min-width: 50px;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(51, 62, 84);
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+section {
+  text-align: center;
+  flex-basis: 280px;
+  flex-grow: unset;
+  justify-items: center;
+  margin: 2vh 4vh;
+  padding: 4px;
+  background: rgb(200, 200, 200) url("../images/background-wall.jpg") repeat top left;
+  border: solid 1px black;
+  border-radius: 8px;
+  box-shadow: black 2px 2px;
+}
+
+label, input, select {
+  display: block;
+  text-align: center;
+  margin: 4px auto;
+  padding: 4px;
+  border-radius: 4px;
+  min-width: 70%;
+}
+
+input, select {
+  background-color: rgb(240, 240, 230);
+}
+
+#register-btn, #login-btn {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  padding: 8px;
+  background-color: rgb(200,220,240);
+  border: solid 1px gray;
+  border-radius: 8px;
+  box-shadow: black 1px 1px;
+  font-size: .9rem;
+  min-width: 40%;
+}
+
+#register-btn:hover, #login-btn:hover {
+  background-color: rgb(160, 200, 235);
+}
+
+#register-btn:active, #login-btn:active {
+  box-shadow: none;
+}

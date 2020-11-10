@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comidas "Pepe"</title>
+  <meta name="author" content="Fernando Miguel">
+  <meta name="keywords" content="html, css, bootstrap, javascript, el Taller de Informatica">
+  <meta name="description" content="Proyecto 1 : El Taller de Informática (Uruguay)">
+  <meta name="robots" content="index">
+  <link rel="icon" href="./images/walrus-icon.png" type="image/png">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <h1>Comidas "Pepe"</h1>
+  <main>
+    <section id="login-box">
+      <h2>Iniciar Sesión</h2>
+      <form id="login-form" action="#">
+        <label for="ci-login">C.I.</label>
+        <input id="ci-login" type="number" name="ci-login">
+        <label for="psw-login">Contraseña</label>
+        <input id="psw-login" type="password" name="psw-login">
+        <input id="login-btn" type="submit" value="Ingresar">
+      </form>
+    </section>
+    <section id="register-box">
+      <h2>Nuevo Usuario</h2>
+      <form id="register-form" action="#">
+        <label for="ci-register">C.I.</label>
+        <input id="ci-register" type="number" name="ci-register">
+        <label for="name-register">Nombre</label>
+        <input id="name-register" type="text" maxlength="20" placeholder="Escribe tu Nombre" name="name-register">
+        <label for="lastName-register">Apellido</label>
+        <input id="lastName-register" type="text" maxlength="20" placeholder="Escribe tu Apellido" name="lastName-register">
+        <label for="email-register">Correo Electrónico</label>
+        <input id="email-register" type="email" maxlength="30" placeholder="tuEmail@dominio.com" name="email-register">
+        <label for="psw-register">Contraseña</label>
+        <input id="psw-register" type="password" minlength="4" maxlength="20" name="psw-register">
+        <label for="psw-register-check">Repita Contraseña</label>
+        <input id="psw-register-check" type="password" minlength="4" maxlength="20" name="psw-register-check">
+        <label for="birthPlace-register">Lugar de Nacimiento</label>
+        <select id="birthPlace-register" name="birthPlace-register" value="">
+          <option value="" selected></option>
+          <option value="Artigas">Artigas</option>
+          <option value="Canelones">Canelones</option>
+          <option value="Cerro Largo">Cerro Largo</option>
+          <option value="Colonia">Colonia</option>
+          <option value="Durazno">Durazno</option>
+          <option value="Flores">Flores</option>
+          <option value="Florida">Florida</option>
+          <option value="Lavalleja">Lavalleja</option>
+          <option value="Maldonado">Maldonado</option>
+          <option value="Montevideo">Montevideo</option>
+          <option value="Paysandú">Paysandú</option>
+          <option value="Río Negro">Río Negro</option> 
+          <option value="Rivera">Rivera</option>
+          <option value="Rocha">Rocha</option>
+          <option value="Salto">Salto</option>
+          <option value="San José">San José</option>
+          <option value="Soriano">Soriano</option>
+          <option value="Tacuarembó">Tacuarembó</option>
+          <option value="Treinta y Tres">Treinta y Tres</option>
+        </select>
+        <input id="register-btn" type="button" value="Registrarse">
+      </form>
+    </section>
+  </main>
+  <script src="js/script.js"></script>
+</body>
+</html>
