@@ -60,9 +60,14 @@ input, select {
   background-color: rgb(240, 240, 230);
 }
 
+#login-error-label, #register-error-label {
+  color: #f00;
+  font-size: 1.1rem;
+}
+
 #register-btn, #login-btn {
-  margin-top: 4vh;
-  margin-bottom: 4vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   padding: 8px;
   background-color: rgb(200,220,240);
   border: solid 1px gray;

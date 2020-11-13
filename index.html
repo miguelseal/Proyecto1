@@ -21,14 +21,15 @@
         <input id="ci-login" type="number" name="ci-login">
         <label for="psw-login">Contraseña</label>
         <input id="psw-login" type="password" name="psw-login">
-        <input id="login-btn" type="submit" value="Ingresar">
+        <p id="login-error-label"></p>
+        <input id="login-btn" type="button" value="Ingresar">
       </form>
     </section>
     <section id="register-box">
       <h2>Nuevo Usuario</h2>
       <form id="register-form" action="#">
         <label for="ci-register">C.I.</label>
-        <input id="ci-register" type="number" name="ci-register">
+        <input id="ci-register" type="number" name="ci-register" placeholder="Sin puntos ni guiones">
         <label for="name-register">Nombre</label>
         <input id="name-register" type="text" maxlength="20" placeholder="Escribe tu Nombre" name="name-register">
         <label for="lastName-register">Apellido</label>
@@ -36,11 +37,11 @@
         <label for="email-register">Correo Electrónico</label>
         <input id="email-register" type="email" maxlength="30" placeholder="tuEmail@dominio.com" name="email-register">
         <label for="psw-register">Contraseña</label>
-        <input id="psw-register" type="password" minlength="4" maxlength="20" name="psw-register">
+        <input id="psw-register" type="password" minlength="4" maxlength="20" name="psw-register" placeholder="Mínimo 4 caracteres">
         <label for="psw-register-check">Repita Contraseña</label>
-        <input id="psw-register-check" type="password" minlength="4" maxlength="20" name="psw-register-check">
+        <input id="psw-register-check" type="password" minlength="4" maxlength="20" name="psw-register-check" placeholder="Mínimo 4 caracteres">
         <label for="birthPlace-register">Lugar de Nacimiento</label>
-        <select id="birthPlace-register" name="birthPlace-register" value="">
+        <select id="birthPlace-register" name="birthPlace-register">
           <option value="" selected></option>
           <option value="Artigas">Artigas</option>
           <option value="Canelones">Canelones</option>
@@ -51,7 +52,7 @@
           <option value="Florida">Florida</option>
           <option value="Lavalleja">Lavalleja</option>
           <option value="Maldonado">Maldonado</option>
-          <option value="Montevideo">Montevideo</option>
+          <option value="Montevideo" selected>Montevideo</option>
           <option value="Paysandú">Paysandú</option>
           <option value="Río Negro">Río Negro</option> 
           <option value="Rivera">Rivera</option>
@@ -62,6 +63,7 @@
           <option value="Tacuarembó">Tacuarembó</option>
           <option value="Treinta y Tres">Treinta y Tres</option>
         </select>
+        <p id="register-error-label"></p>
         <input id="register-btn" type="button" value="Registrarse">
       </form>
     </section>
