@@ -4,7 +4,7 @@ function User(ci, first_name, last_name, email, psw, birth_place) {
   this.firstName = first_name;
   this.lastName = last_name;
   this.email = email;
-  this. password = psw;
+  this.password = psw;
   this.birthPlace = birth_place;
 }
 
@@ -12,6 +12,15 @@ function createUser() {
   //Checks validity of user entered data and returns a new object if valid.
   //If not valid, returns false.    
   let userData, pswCheck;
+
+  function checkAllFieldsComplete(user_object) {
+    for (const keys in user_object) {
+      if (!user_object[keys]) {
+        return false;
+      }
+    }
+    return true;
+  }
 
   function checkUserId (id) {
     //Returns true if the id string has 8 digits without any punctuation signs.
@@ -36,22 +45,24 @@ function createUser() {
   pswCheck = document.querySelector("#psw-register-check").value;
 
   userData = new User(document.querySelector("#ci-register").value, document.querySelector("#name-register").value, document.querySelector("#lastName-register").value, document.querySelector("#email-register").value, document.querySelector("#psw-register").value, document.querySelector("#birthPlace-register").value);
-
-  if (!checkUserId(userData.ci)) {
+  
+  if (!checkAllFieldsComplete(userData)) {
+    errorLabelSelector.innerHTML = "Debes llenar todos los campos";
+    return false;
+  } else if (!checkUserId(userData.ci)) {
    //alert("La cédula es incorrecta");
    errorLabelSelector.innerHTML = "Documento inválido"; 
     return false;
   } else if (!checkPasswords(userData.password, pswCheck)) {
     //alert("Contraseña inválida o no coinciden");
     errorLabelSelector.innerHTML = "Contraseña inválida";
-
     return false;
   } else if (!checkEmail(userData.email)) { 
     //alert("Formato de correo electrónico inválido");
     errorLabelSelector.innerHTML = "Correo electrónico inválido";
-
     return false;
-  } else return userData;
+  } 
+  else return userData;
 }
 
 function addNewUser(new_user, user_list) {
@@ -59,13 +70,13 @@ function addNewUser(new_user, user_list) {
   // Check if user already exists by ID.
   // User exists? throw error, otherwise, add user to object list. 
   let userDataValid, userExists;
-
+  
   userDataValid = !(new_user === false);
 
   user_list.forEach(element => {
     if (element.ci === new_user.ci) {
       userExists = true;
-      errorLabelSelector.innerHTML = "El Usuario ya existe";
+      errorLabelSelector.innerHTML = "El Usuario ya existe. Inicie sesión.";
       //alert("El usuario ya existe.");
     } else userExists = false;
   });
@@ -75,6 +86,7 @@ function addNewUser(new_user, user_list) {
     return true;
   } else return false;
 }
+
 //START OF EXECUTION
 let userList, errorLabelSelector;
 // Registered users go here.
@@ -92,16 +104,22 @@ document.querySelector("#register-btn").addEventListener('click', () => {
   status = addNewUser(newUser, userList);
 
   if (status === true) { //i.e. succesfull
-    //save userList to local storage
-    //goto products page
     window.location.href = `products.html?${String(newUser.firstName)}`;
-  } else {
-    //
-
-    //alert("No se ha podido ingresar nuevo usuario.");
-    //window.location.href = "index.html";
-  }
+  } 
 });
 
 //Login handler.
-document.querySelector("#login-btn").addEventListener("click", ()=> console.log("login-works"));
+document.querySelector("#login-btn").addEventListener("click", () => {
+  let enteredId, enteredPsw;
+
+  errorLabelSelector = document.querySelector("#login-error-label");
+  enteredId = document.querySelector("#ci-login").value;
+  enteredPsw = document.querySelector("#psw-login").value;
+  
+  userList.forEach(element =>  {
+    if (element.ci === enteredId && element.password === enteredPsw)
+      window.location.href = `products.html?${String(element.firstName)}`;
+    else  
+      errorLabelSelector.innerHTML = "Usuario o contraseña incorrecta";
+  })
+});
