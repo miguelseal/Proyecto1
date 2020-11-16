@@ -28,8 +28,8 @@ function showClock() {
   seconds.length < 2 ? seconds = `0${seconds}` : seconds += "";
 
   //Update UI
-  HOURS.innerHTML = `${hours} : `; 
-  MINUTES.innerHTML = `${minutes} : `;
+  HOURS.innerHTML = `${hours} :`; 
+  MINUTES.innerHTML = ` ${minutes} : `;
   SECONDS.innerHTML = seconds;
   }, 1000 );
 

@@ -1,8 +1,10 @@
 body {
-  background: lightgray url("../images/products-background.jpg") repeat top left;
+  background: lightgray url("../images/brick-wall.jpg") repeat top left;
   font-size: 16px;
 }
-
+nav div{
+  flex-basis: 50%;
+}
 nav li {
   font-size: 1.3rem;
 }
@@ -20,7 +22,5 @@ nav li {
   font-size: 1.2rem;
 }
 
-#clock span {
-  padding: 0px 2px;
-}
+
 

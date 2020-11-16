@@ -13,47 +13,195 @@
   <link rel="stylesheet" href="css/products.css">
   <title>Nuestros Productos</title>
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-0">
-    <img src="images/logo1.png" alt="logo" class="">
-    <button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item p-2 m-1 active">
-          <a class="nav-link" href="#">Menú<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item p-2 m-1">
-          <a class="nav-link" href="#">Proyecto 1</a>
-        </li>
-        <li class="nav-item p-2 m-1">
-          <a class="nav-link" href="#">Sobre Nosotros</a>
-        </li>
-        <li class="nav-item p-2 m-1">
-          <a class="nav-link" href="./index.html" tabindex="-1" aria-disabled="true">Logout</a>
-        </li>
-      </ul>
+<body class="m-0">
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top p-0">
+      <img src="images/logo1.png" alt="logo" class="">
+      <button class="navbar-toggler mr-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item p-2 m-1 active">
+            <a class="nav-link" href="#">Menú<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item p-2 m-1">
+            <a class="nav-link" href="#">Proyecto 1</a>
+          </li>
+          <li class="nav-item p-2 m-1">
+            <a class="nav-link" href="#">Sobre Nosotros</a>
+          </li>
+          <li class="nav-item p-2 m-1">
+            <a class="nav-link" href="./index.html" tabindex="-1" aria-disabled="true">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--User Name-->
+    <p class="container-fluid navbar-light bg-light" id="user-name"></p>
+
+    <!--Real Time Clock-->
+    <section class="container-fluid bg-dark" id="clock-container">
+      <p id="clock">Hora actual: 
+        <span id="hours"></span>
+        <span id="minutes"></span>
+        <span id ="seconds"></span>
+      </p>
+    </section>
+  </header>
+  <main>
+    <!--Carousel menu-->
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <section id="pizzeria-items" class="w-100 d-flex justify-content-center my-4">
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/pizza-margarita.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Pizzas">
+              <div class="card-body">
+                <h5 class="card-title text-center">Pizzetas</h5>
+                <p class="card-text">Mediterránea, Capricciosa, Margarita, Quattro Stagioni, Fungi, con "toppings".</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Montevideo, Maldonado, Bilbao</li>
+                <li class="list-group-item text-center text-success">+ 9.4</li>
+              </ul>
+            </div>
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/faina.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Faina">
+              <div class="card-body">
+                <h5 class="card-title text-center">Fainá</h5>
+                <p class="card-text">El clásico Fainá Rocadío. Hecho con el paquete de Puritas pero más rico ya que tiene agua indonesia.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Jakarta, Montevideo, Bilbao</li>
+                <li class="list-group-item text-center text-success">+ 9.8</li>
+              </ul>
+            </div>
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/calzone.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Calzones">
+              <div class="card-body">
+                <h5 class="card-title text-center">Calzone "De la abuela"</h5>
+                <p class="card-text">Misma masa de pizza pero con la forma que más te gusta, bien estirado para que no te quedes con hambre.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Montevideo, Maldonado, Bilbao</li>
+                <li class="list-group-item text-center text-success">+ 9.7</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="carousel-item">
+          <section id="salad-items" class="w-100 d-flex justify-content-center my-4">
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/mediterranean-salad.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Ensalada Mediterranea">
+              <div class="card-body">
+                <h5 class="card-title text-center">Ensalada Mediterránea</h5>
+                <p class="card-text">Sencilla ensalada mediterránea para dejar contento hasta al cardiólogo más exigente.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Todas las sucursales</li>
+                <li class="list-group-item text-center text-success">+ 9.0</li>
+              </ul>
+            </div>
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/rocadio-salad.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Ensalada Rocadio">
+              <div class="card-body">
+                <h5 class="card-title text-center">Ensalada "Rocadío"</h5>
+                <p class="card-text">Nuestra ensalada "aditivada". Te mantiene lleno un par de minutos más asi evitas comerte medio paquete de galletitas.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Montevideo, Doha, Bilbao</li>
+                <li class="list-group-item text-center text-success">+ 9.2</li>
+              </ul>
+            </div>
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/huerta-salad.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Ensalada huerta">
+              <div class="card-body">
+                <h5 class="card-title text-center">Ensalada de la huerta</h5>
+                <p class="card-text">Sencilla ensalada, apta y recomendada para acompañar nuestras carnes.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Todas las sucursales</li>
+                <li class="list-group-item text-center text-success">+ 7.4</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <div class="carousel-item">
+          <section id="parrilla-items" class="w-100 d-flex justify-content-center my-4">
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/brasero-rocadio.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Brasero Rocadio de la casa">
+              <div class="card-body">
+                <h5 class="card-title text-center">Brasero "Rocadío"</h5>
+                <p class="card-text">No dejes de probar nuestro brasero típico uruguayo. Se puede elegir a gusto el contenido, para dos personas.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Montevideo, Maldonado, Bilbao</li>
+                <li class="list-group-item text-center text-success">+ 10.0</li>
+              </ul>
+            </div>
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/pulpon.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Pulpon de la casa">
+              <div class="card-body">
+                <h5 class="card-title text-center">Pulpón de la Casa</h5>
+                <p class="card-text">Pulón clásico acompañado con patatas fritas. Elige un acompañamiento entre nuestras ensaladas.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Montevideo, Maldonado</li>
+                <li class="list-group-item text-center text-success">+ 9.6</li>
+              </ul>
+            </div>
+            <div class="card m-2 p-2" style="width: 18rem;">
+              <img src="images/asado-tira.jpg" class="card-img-top w-50 rounded-circle mx-auto mt-2" alt="Asado tira">
+              <div class="card-body">
+                <h5 class="card-title text-center">Asado de tira clásico</h5>
+                <p class="card-text">Prueba este clásico uruguayo acompañado de nuestras ensaladas o con patatas.</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Montevideo, Maldonado</li>
+                <li class="list-group-item text-center text-success">+ 9.8</li>
+              </ul>
+            </div>
+          </section>  
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-  </nav>
-  <p class="container-fluid navbar-light bg-light" id="user-name"></p>
-  <section class="container-fluid bg-dark" id="clock-container">
-    <p id="clock">Hora actual: 
-      <span id="hours"></span>
-      <span id="minutes"></span>
-      <span id ="seconds"></span>
-    </p>
-  </section>
-  <section>
-
-  </section>
+            
+    <!--Decorative img-->
+    <section class="container-fluid w-100">
+      <img src="images/info-background.jpg" alt="" class="w-100">
+    </section>
+  </main>
 
 
 
-
+  <!--Companny info-->
+  <aside class="container-fluid rounded w-75 d-flex justify-content-center align-items-center bg-light my-4">
+    <p class="w-75 text-justify">El horno de Rocadío LLC. Nace como una empresa familiar en Jakarta, Indonesia. Esas ideas que se gestan tomando mate al costado de la piscina en un día de descanso. Tenemos como pilares la calidad de servicio al Cliente y el mantenimiento de altos estándares de calidad en todo lo que hacemos.</p>
+    <img src="images/logo1.png" alt="Logo de la empresa">
+  </aside>
+  <footer class="container-fluid text-center bg-dark text-light">
+    <p class="m-0 p-3">Copyright 2020 - Todos los derechos reservados</p>
+  </footer>
 
   
+  
+
+
+
+
+
+
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script> 

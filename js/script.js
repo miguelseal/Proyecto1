@@ -25,7 +25,7 @@ function createUser() {
   function checkUserId (id) {
     //Returns true if the id string has 8 digits without any punctuation signs.
     //Requires: 8 charachters, no "." to avoid float casting, check for NaN returns.
-    return (id.length === 8 && !id.includes(".") && !Number.isNaN(Number(id)));
+    return (id.length === 8 && !id.includes(".") && !isNaN(Number(id)));
   }
   
   function checkEmail(email) {
