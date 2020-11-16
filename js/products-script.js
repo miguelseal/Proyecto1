@@ -32,7 +32,11 @@ function showClock() {
   MINUTES.innerHTML = ` ${minutes} : `;
   SECONDS.innerHTML = seconds;
   }, 1000 );
-
 }
 
 showClock();
+
+//Iterating for dynamic content.
+
+//Defining a list of products and its related information.
+//... not enough time...:-(

@@ -22,5 +22,22 @@ nav li {
   font-size: 1.2rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .menu-items {
+    display: block !important;
+  }
 
+  .card {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
+  aside {
+    flex-direction: column !important;
+    padding-top: 15px !important;
+  }
+
+  aside img {
+    width: 80px !important;
+  }
+}
